@@ -1,24 +1,23 @@
 # Fermat
 
 def check_fermat():
-    a = input('Favor digitar um numero:')
-    b = input('Favor digitar outro numero:')
-    c = input('Digite o terceiro numero:')
-    n = input('E agora digite o ultimo numero:')
+    tupla = ('Digite o primeiro número: ',
+             'Digite o segundo número: ',
+             'Agora, por favor digite o terceiro número: ',
+             'Digite o último número: ')
 
-    a = int(a)
-    b = int(b)
-    c = int(c)
-    n = int(n)
+    user = []
+    for i in tupla:
+        user.append(int(input(i)))
+
+#    x = user[0]**user[3] + user[1]**user[3] == user[2]**user[3]
+    a, b, c, n = user
     x = a**n + b**n == c**n
 
-    if n > 2 and a**n + b**n == c**n:
+    if user[3] > 2 and x:
         print('Holy smokes, Fermat was wrong!!')
     else:
         print("No, that doesn't work", x )
-        
-
-    return
 
 
 check_fermat()
