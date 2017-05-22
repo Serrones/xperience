@@ -9,9 +9,9 @@ Then, the output should be:
 """
 
 
-import math
+from math import factorial
 
 num = input('Favor digitar um número:')
 num = int(num)
 
-print(math.factorial(num))
+print(factorial(num))

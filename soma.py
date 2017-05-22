@@ -1,9 +1,8 @@
 def numero():
-    num1 = input('Favor digitar um número: ')
-    num2 = input('Favor digitar outro número: ')
-    soma = int(num1) + int(num2)
+    num1 = int(input('Favor digitar um número:\n'))
+    num2 = int(input('Favor digitar outro número:\n'))
+    soma = num1 + num2
     return soma
 
 total = numero()
-
-print('Total é: ', total,'Tipo: ', type(total))
+print('O total é {}, e o Tipo é {}'.format(total,type(total)))

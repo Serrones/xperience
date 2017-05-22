@@ -1,9 +1,9 @@
 # area de um circulo
 
-import math
+from math import pi
 
 def area(r):
-    return math.pi * r**2
+    return pi * r**2
 
 r = int(input('Favor digitar o raio do circulo: '))
 

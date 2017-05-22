@@ -1,24 +1,19 @@
 # from 70's to nowadays
 
-import time
+from time import time
 
-print(time.time())
+print(time(),'segundos')
 
-seg = time.time()
+seg = time()
 
-minu = seg / 60
-seg_sobra = seg % 60
-seg_sobra = int(seg_sobra)
+minu = seg // 60
+seg_sobra = int(seg % 60)
 
-hr = minu / 60
-hr = int(hr)
-min_sobra = minu % 60
-min_sobra = int(min_sobra)
+hr = minu // 60
+min_sobra = int(minu % 60)
 
-dia = hr / 24
-dia = int(dia)
-hr_sobra = hr % 24
-hr_sobra = int(hr_sobra)
+dia = int(hr / 24)
+hr_sobra = int(hr % 24)
 
-print('Estamos no ar desde Primeiro de Janeiro de 1970, ou seja:', dia ,'dias,',
- hr_sobra ,'horas,', min_sobra ,'minutos e', seg_sobra ,'segundos!!'  )
+print('Estamos no ar desde Primeiro de Janeiro de 1970,',
+      'ou seja: {} dias, {} horas, {} minutos e {} segundos!!'.format(dia,hr_sobra,min_sobra,seg_sobra))
